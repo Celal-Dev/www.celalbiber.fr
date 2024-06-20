@@ -1,0 +1,1179 @@
+/* Styles globaux */
+body, html {
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    scroll-behavior: smooth;
+    cursor: none; /* Cache le curseur par défaut */
+}
+
+.content {
+    float: left;
+    margin: 1% 3%;
+}
+
+small {
+    font-size: 80%;
+}
+
+/* Menu mobile first CSS */
+body {
+    -webkit-animation: bugfix infinite 1s;
+}
+
+.mainMenu {  
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1.4;
+    border-bottom: 1px solid #ccc;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: apparition 0.4s 0.4s ease-out forwards;
+    transition: 2.5s;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+#toggleMenu, .toggleMenu {
+    display: none;
+}
+
+.toggleMenu {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.menu {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-y: hidden;
+    text-align: center;
+    display: none; /* Ensure the menu is hidden initially */
+    max-height: 0; /* Ensure the menu is collapsed initially */
+    transition: max-height 1s ease-in-out; /* For smooth height transition */
+    
+}
+
+.menu li {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #ccc;
+    white-space: nowrap;
+    display: block;
+    font-size: 20px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.menu li:hover {
+    background-color: #000000;
+    cursor: pointer;
+    transition: 0.5s;
+    color: #ffffff;
+}
+
+.menu a, .menu a:visited {
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 5px 3%;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.menu a:hover {
+    color: #ffffff;
+
+}
+
+
+label.menuTitle {
+    text-align: left;
+    font-size: 20px;
+    padding: 6px 3%;
+    margin: 0;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+    background: url('../img/menu_black.png') no-repeat 97% 10px;
+    background-size: 24px 19px;
+    transition: background-image 0.3s ease;
+    box-sizing: border-box; /* Ensure padding is included in width */
+    
+}
+/* changement couleur hamburger au scroll */
+.scrolled label.menuTitle {
+    background-image: url('../img/menu_white.png');
+}
+
+/* Grand écran */
+@media screen and (min-width: 1000px) {
+    .navbar-name {
+        display: inline;
+    }
+
+    label.menuTitle {
+        display: none;
+    }
+
+    .menu {
+        display: flex !important;
+        justify-content: center;
+        border: 0;
+        overflow: visible;
+        max-height: inherit;
+        padding: 10px 0;
+        box-sizing: border-box; /* Ensure padding is included in width */
+    }
+
+    .menu li {
+        width: auto;
+        display: inline-block;
+        border: 0;
+        border-left: 1px solid #ccc;
+        box-sizing: border-box; /* Ensure padding is included in width */
+    }
+
+    .menu li:first-child {
+        border-left: 0;
+    }
+
+    .menu a, .menu a:visited {
+        display: inline-block;
+        width: auto;
+        padding: 0 10px;
+        box-sizing: border-box; /* Ensure padding is included in width */
+    }
+}
+
+
+
+
+
+/* Haut de page */
+.image1 {
+    background-image: url("../img/image_acceuil.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    box-sizing: border-box; /* Ensure padding is included in width */
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in width */
+    overflow-x: hidden; /* Prevent overflow on x-axis */
+}
+
+.nom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.nom1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 50px;
+    padding: 5px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.span2 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* apparition */
+
+div.nom div {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.nom > div:nth-child(1) {
+    animation: apparition 0.8s 0.4s ease-out forwards;
+}
+
+.nom > div:nth-child(2) {
+    animation: apparition 0.8s 0.6s ease-out forwards;
+}
+
+.nom > div:nth-child(3) {
+    animation: apparition 0.8s 0.8s ease-out forwards;
+}
+
+a {
+    color: black;
+}
+
+/* H2 encadrement */
+
+h2{
+    border: 2px solid #e9630a;
+    padding: 10px;
+    margin: 0 ;
+}
+
+/* fonction js changement de couleur */
+.scrolled {
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    font-weight: 500;
+    padding: 0;
+    width: 100%;
+    transition-duration: 2.5s;
+}
+
+.colorA {
+    color: white !important;
+    transition-duration: 2.5s;
+}
+
+.quiSuisJe {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.4);
+    font-size: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    transition: all 0.5s;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.quiSuisJe:after, .quiSuisJe:before {
+    content: " ";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border: 0px solid #fff;
+    transition: all 0.5s;
+}
+
+.quiSuisJe:after {
+    top: -1px;
+    left: -1px;
+    border-top: 5px solid black;
+    border-left: 5px solid black;
+}
+
+.quiSuisJe:before {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+}
+
+.quiSuisJe:hover {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+.quiSuisJe:hover:before, .quiSuisJe:hover:after {
+    width: 100%;
+    height: 100%;
+    border-color: #e9630a;
+}
+
+/* main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden; /* Prevent overflow on x-axis */
+    background-color: #fdfdfd;
+
+}
+
+.presentation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #fdfdfd;
+}
+
+.presentation1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.Apropos {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #e9630a;
+}
+
+.photoMain {
+    width: 90%;
+    border-radius: 15px;
+}
+
+.textApropos {
+    font-size: 20px;
+    margin-top: 20px;
+    width: 90%;
+    text-align: center;
+}
+/* apparition */
+@keyframes apparition {
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+
+/* Section Travaux */
+
+
+.projets{
+    width: 100%;
+}
+
+.projet{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h4{
+    margin-top: 0px;
+}
+
+.projet a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.projet a:hover img {
+    opacity: 0.8;
+}
+
+.travaux {
+    background-color: #eeeeee;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.section-travaux {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+
+.section-travaux h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #e9630a;
+    margin-top: 50px;
+}
+
+.section-travaux p{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.categorie{
+    width: 100%;
+}
+
+.section-travaux .categorie h3 {
+    font-size: 20px;
+    color: #000000;
+}
+
+.section-travaux .projets {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-travaux .projet {
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    text-align: left;
+}
+.section-travaux .projet:hover{
+    border: 1px solid #e9630a;
+
+}
+
+.section-travaux .projet h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.section-travaux .projet p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.projet img {
+    width: 100%;
+}
+
+.imgTG img{
+    height: 150px;
+    object-fit: contain;
+}
+
+/* cv */
+
+.cv-section {
+    text-align: center;
+    width: 100%;
+}
+
+.cv-section h3{
+    margin-top: 50px;
+}
+
+.download-cv {
+    text-decoration: none;
+}
+
+.cv-thumbnail {
+    width: 100px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Style pour le modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Style pour l'image à l'intérieur du modal */
+.modal-content {
+     display: block;
+    width: 80%; 
+    max-width: 900px; 
+    max-height: 90vh; 
+    object-fit: contain; 
+    margin: auto; 
+    position: relative; 
+    top: 40%; 
+    transform: translateY(-50%); 
+}
+
+/* Style pour le bouton de fermeture */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#cv-image{
+    cursor: pointer; 
+    height: 66vh;
+    object-fit: contain;
+}
+
+.clickable-image{
+    cursor: pointer;
+}
+
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 1000px) {
+    .modal-content {
+        width: 95%;
+        height: auto;
+    }
+}
+/* skill bar */
+
+.section-skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerCompetences{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+.section-skills p{
+    width: 100%;
+    font-size: 20px;
+
+}
+
+
+.skills {
+    width: 90%;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.section-skills h2 {
+    margin-top: 50px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #e9630a;
+}
+
+
+.containerCompetences div i{
+    font-size: 50px ;
+}
+
+
+
+.BarreCompetences{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* icone Competence */
+
+.iconeCompetence{
+    border-radius: 75px;
+    border: 1px solid #e9630a;
+    width: 120px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #e9630a;
+    margin: 10px;
+    z-index: 1;
+}
+
+.iconeCompetence:hover{
+    background: #e9630a;
+    color: rgb(0, 0, 0);
+}
+
+.iconeWidht, .iconeWidht1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* css du formulaire de contact */
+
+.formulaire {
+    width: 100%;
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.titreFormulaire {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+    color: #e9630a;
+}
+
+.containerForm {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: #eeeeee;
+    border: 1px solid #000;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.containerForm:hover{
+    border: 1px solid #e9630a;
+
+}
+
+.containerForm h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+}
+
+.form-contact-input,
+.form-contact-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-contact-textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.form-contact-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e9630a;
+    border: none;
+    border-radius: 4px;
+    color: #000000;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 1s ease, color 1s ease; /* Transition de 1 seconde */
+}
+
+.form-contact-button:hover {
+    color: white;
+    background-color: #000000;
+    transition: 1s;
+}
+
+.cvDL{
+    margin-top: 15px;
+    width: 250px;
+}
+
+
+.invitationMessage{
+    width: 90%;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+/* footer */
+
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-links li {
+    margin: 0 10px;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+
+/* // scroll boutton noire */
+
+
+.scroll-btn {
+    margin-top : 30px;
+    margin-bottom : 20px;
+    padding: 10px 20px;
+    background-color: #e9630a;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px; /* Ajustez la taille de la flèche */
+    text-align: center;
+    transition: background-color 0.3s;
+    bottom: 0;
+    
+}
+
+.scroll-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transition: 1s;
+}
+
+
+
+
+/* fleche haut d epage */
+.btn {
+    height: 50px;
+    width: 50px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 2px;
+    bottom: 2px;
+    cursor: pointer;
+    border: 3px solid #e9630a;
+    z-index: 9998;
+}
+.icone {
+    width: 25px;
+}
+
+.display{
+    display: none;
+}
+
+
+/* apparition disparition */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(-20px); /* Départ légèrement en bas */
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out; /* Transition plus longue et plus douce */
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0); /* Position finale */
+}
+
+
+
+/* section contact Lieux */
+.LieuxContact{
+    width: 100%;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.LieuxContact div{
+    text-align: center;
+}
+
+
+
+/* reaseaux sociaux */
+.reaseauxSociaux{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+}
+
+.reaseauxSociaux p:nth-child(1){
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    
+}
+
+.linkedinRS{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    padding-top: 0px;
+}
+
+.linkedinRS a:nth-child(2){
+    margin-left: 20px;
+}
+
+.imgLinkedin{
+    width: 50px;
+}
+
+.containerFormRs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.formulaire{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* icone reseaux sociaux */
+
+.fa-map-marker-alt{
+    color: #e9630a;
+}
+.fa-phone{
+    color: #e9630a;
+}
+
+
+.fa-github{
+    font-size: 50px;
+    color: #e9630a;
+}
+.fa-github:hover{
+    font-size: 50px;
+    color: #ffffff;
+    transition: 1s;
+}
+
+.fa-linkedin{
+    font-size: 50px;
+    color: #e9630a;
+}
+.fa-linkedin:hover{
+    font-size: 50px;
+    color: #ffffff;
+    transition: 1s;
+}
+
+
+
+.fa-github1{
+    font-size: 50px;
+    color: #e9630a;
+}
+.fa-github1:hover{
+    font-size: 50px;
+    color: #000000;
+    transition: 1s;
+}
+
+.fa-linkedin1{
+    font-size: 50px;
+    color: #e9630a;
+}
+
+.fa-linkedin1:hover{
+    font-size: 50px;
+    color: #000000;
+    transition: 1s;
+}
+
+/* cookie */
+
+
+
+.cookie-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: #000000;
+    color: #F7F7F7;
+    padding: 0 32px;
+    box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.39);
+    padding-top: 25px;
+    z-index: 9998;
+    transition: 400ms;
+  }
+  
+  .cookie-container.active {
+    bottom: 0;
+  }
+  
+  .cookie-container a {
+    color: #F7F7F7;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-align: none;
+  }
+  
+  .cookie-btn {
+    background: #F7F7F7;
+    border: 0;
+    color: #000000;
+    padding: 12px 48px;
+    font-size: 18px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .cookie-container {
+    transition: bottom 0.4s ease;
+  }
+
+/* Mentions Légales */
+
+.aML{
+    text-decoration: none;
+}
+
+.ml{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0% 5% ;
+    background-color: #fdfdfd;
+}
+.ml1{
+    text-align: center;
+    font-size: 15px;
+}
+
+h5{
+    border: 2px solid black;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    padding: 20px;
+}
+h6{
+    font-size: 15px;
+    text-align: center;
+    text-decoration:underline ;
+}
+
+.image2 {
+    background-image: url("../img/ML.png");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    box-sizing: border-box; /* Ensure padding is included in width */
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+/* selection avec curseur souris */
+::selection {
+    background-color: #000000; /* Gris clair pour le fond */
+    color: #e9630a; /* Texte en noir */
+}
+::-moz-selection {
+    background-color: #c0c0c0; /* Gris clair pour le fond */
+    color: black; /* Texte en noir */
+}
+
+/* strong */
+strong {
+    font-weight: normal;
+}
+
+
+/* Styles pour le curseur personnalisé */
+.custom-cursor {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: transform 0.1s ease-out, width 0.2s ease-out, height 0.2s ease-out;
+    z-index: 9999;
+    mix-blend-mode: difference; /* Inversion des couleurs */
+    background-color: white; /* Couleur de fond pour l'inversion */
+    
+}
+
+/* Agrandissement du curseur sur les éléments cliquables */
+.custom-cursor.hover {
+    width: 80px;
+    height: 80px;
+}
+
+
+
+/* Customisation de la scrollbar pour les navigateurs basés sur WebKit */
+::-webkit-scrollbar {
+    width: 25px; /* Largeur de la scrollbar */
+}
+
+/* Fond de la scrollbar */
+::-webkit-scrollbar-track {
+    background: #e9630a; /* Couleur de fond */
+}
+
+/* Pouce de la scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #000000; /* Couleur du pouce */
+    border-top:  3px solid #ffffff;
+    border-bottom:  3px solid #ffffff;
+}
+
+
+ /* Appliquer l'image de curseur personnalisé aux liens lors du survol */
+/* Appliquer le curseur personnalisé à tous les éléments sauf l'image avec la classe .photoMain */
+a:hover, img:hover:not(.photoMain), .clickable:hover, .clickable-image:hover, button:hover, #cv-image:hover {
+    cursor: url('../img/custom-cursor.png'), auto; /* Utilisez votre image de curseur personnalisée */
+}
+
+
+
+
+/* responsive */
+
+@media screen and (min-width: 1000px){
+    .cv-section, .BarreCompetences, .iconeWidht1{
+           width: 50%;
+        }  
+    .textApropos{
+            width: 63%;
+        }
+    .photoMain {
+        width: 33%;
+        margin-right: 3%;
+    }
+    .categorie, .containerForm, .LieuxContact, .iconeWidht{
+        width: 33%;
+    }
+   
+    .presentation1, .section-travaux, .skills, .containerFormRs{
+        width: 66%;
+    } 
+
+    .projet{
+        width: 80%;
+        height: 250px;
+    }
+    .imgTG{
+        width: 100%;
+        height: 70%;
+    }
+
+    .imgTG img{
+        width: 100%;
+        height: 75%;
+        object-fit: contain;
+    }
+    
+    
+    }
+
