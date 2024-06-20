@@ -52,12 +52,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         // Configurations du serveur SMTP
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
-        $mail->Username = 'cbiber.dev@gmail.com';
-        $mail->Password = 'jqwy zqqq hbkg nbiy';
+        $mail->Host = '';
+        $mail->SMTPAuth = ;
+        $mail->Username = '';
+        $mail->Password = '';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port = 465;
+        $mail->Port = ;
 
         // Destinataires
         $mail->setFrom('from@example.com', 'Contact - Portfolio');
