@@ -61,11 +61,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Destinataires
         $mail->setFrom('from@example.com', 'Contact - Portfolio');
-        $mail->addAddress('cbiber.dev@gmail.com');
+        $mail->addAddress('');
 
         // Contenu du mail
         $mail->isHTML(true);
-        $mail->Subject = 'Contact - Portfolio';
+        $mail->Subject = '';
         $mail->Body = nl2br($message);  // nl2br pour conserver les sauts de ligne
         $mail->AltBody = strip_tags($message);
 
