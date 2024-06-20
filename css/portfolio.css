@@ -1135,7 +1135,17 @@ a:hover, img:hover:not(.photoMain), .clickable:hover, .clickable-image:hover, bu
     cursor: url('../img/custom-cursor.png'), auto; /* Utilisez votre image de curseur personnalisée */
 }
 
+/* Styles pour masquer le curseur */
+.custom-cursor.hidden {
+    display: none;
+}
 
+/* Responsive adjustments */
+@media screen and (max-width: 1000px) {
+    .custom-cursor {
+        display: none; /* Cache le curseur par défaut en mode mobile */
+    }
+}
 
 
 /* responsive */
