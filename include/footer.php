@@ -54,6 +54,13 @@
         });
 
       });
+
+           // Masquer le curseur en mode mobile après un clic
+    if (window.matchMedia("(max-width: 1000px)").matches) {
+        document.addEventListener('click', () => {
+            customCursor.classList.add('hidden');
+        });
+    }
     </script>
 
 
