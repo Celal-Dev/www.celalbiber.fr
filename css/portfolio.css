@@ -5,7 +5,7 @@ body, html {
     padding: 0;
     overflow-x: hidden; /* Empêche le défilement horizontal */
     scroll-behavior: smooth;
-    cursor: none; /* Cache le curseur par défaut */
+    cursor: none;
 }
 
 .content {
@@ -541,6 +541,7 @@ h4{
 }
 
 #cv-image{
+    width: 90%;
     cursor: pointer; 
     height: 66vh;
     object-fit: contain;
@@ -579,14 +580,13 @@ h4{
 }
 
 .section-skills p{
-    width: 100%;
+    width: 90%;
     font-size: 20px;
 
 }
 
 
 .skills {
-    width: 90%;
     text-align: center;
     overflow-x: hidden;
 }
@@ -638,6 +638,7 @@ h4{
 }
 
 .iconeWidht, .iconeWidht1{
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1087,6 +1088,28 @@ strong {
 }
 
 
+
+
+
+
+/* Customisation de la scrollbar pour les navigateurs basés sur WebKit */
+::-webkit-scrollbar {
+    width: 25px; /* Largeur de la scrollbar */
+}
+
+/* Fond de la scrollbar */
+::-webkit-scrollbar-track {
+    background: #e9630a; /* Couleur de fond */
+}
+
+/* Pouce de la scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #000000; /* Couleur du pouce */
+    border-top:  3px solid #ffffff;
+    border-bottom:  3px solid #ffffff;
+}
+
+
 /* Styles pour le curseur personnalisé */
 .custom-cursor {
     width: 40px;
@@ -1110,34 +1133,15 @@ strong {
 }
 
 
-
-/* Customisation de la scrollbar pour les navigateurs basés sur WebKit */
-::-webkit-scrollbar {
-    width: 25px; /* Largeur de la scrollbar */
-}
-
-/* Fond de la scrollbar */
-::-webkit-scrollbar-track {
-    background: #e9630a; /* Couleur de fond */
-}
-
-/* Pouce de la scrollbar */
-::-webkit-scrollbar-thumb {
-    background: #000000; /* Couleur du pouce */
-    border-top:  3px solid #ffffff;
-    border-bottom:  3px solid #ffffff;
-}
-
-
- /* Appliquer l'image de curseur personnalisé aux liens lors du survol */
 /* Appliquer le curseur personnalisé à tous les éléments sauf l'image avec la classe .photoMain */
 a:hover, img:hover:not(.photoMain), .clickable:hover, .clickable-image:hover, button:hover, #cv-image:hover {
     cursor: url('../img/custom-cursor.png'), auto; /* Utilisez votre image de curseur personnalisée */
 }
 
-/* Styles pour masquer le curseur */
-.custom-cursor.hidden {
-    display: none;
+/* Agrandissement du curseur sur les éléments cliquables */
+.custom-cursor.hover {
+    width: 80px;
+    height: 80px;
 }
 
 /* Responsive adjustments */
@@ -1183,7 +1187,5 @@ a:hover, img:hover:not(.photoMain), .clickable:hover, .clickable-image:hover, bu
         height: 75%;
         object-fit: contain;
     }
-    
-    
     }
 
