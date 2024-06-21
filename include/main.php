@@ -26,7 +26,7 @@ require('traitement.php');
         <section id="travaux" class="travaux">
             <div class="section-travaux">
                 <h2 class="fade-in">Mes Travaux</h2>
-                <p class="invitationMessage fade-in">Ci-dessous, découvrez mes travaux en développement web et voyez les détails de mes codes en visitant mon GitHub <a href="https://github.com/Celal-Dev" target="_blank"><i class="fa-brands fa-github fa-github1"></i></a>.
+                <p class="invitationMessage fade-in" style="margin-top: 0px;">Ci-dessous, découvrez mes travaux en développement web et voyez les détails de mes codes en visitant mon GitHub <a href="https://github.com/Celal-Dev" target="_blank"><i class="fa-brands fa-github fa-github1"></i></a>.
                 </p>
                 <div class="categorie ">
                     <div class="projets">
@@ -96,10 +96,13 @@ require('traitement.php');
             <div class="section-skills">
                 <h2 class="fade-in">Mes Compétences</h2>
                 
-                <p class="fade-in">En tant que <strong>développeur web</strong> passionné, j'ai consacré de nombreuses heures à perfectionner mes compétences et à suivre les dernières technologies. Mon engagement envers l'excellence et la création de solutions web innovantes se reflète dans chaque projet. Voici un aperçu de mes compétences clés :</p>
+                <p class="fade-in invitationMessage" style="margin-top: 0px;">
+                    En tant que <strong>développeur web</strong> passionné, j'ai consacré de nombreuses heures à perfectionner mes compétences et à suivre les dernières technologies. Mon engagement envers l'excellence et la création de solutions web innovantes se reflète dans chaque projet.</p> 
+                
+                
+                <h3 class="fade-in h3SectionSkill">Voici un aperçu de mes compétences clés :</h3>
                 <div class="containerCompetences">
                 <div class="BarreCompetences">
-
                 <div class="iconeWidht">
                 <div class="fade-in iconeCompetence">HTML <br><i class="fa-brands fa-html5"></i></div> 
                 </div>
@@ -134,7 +137,7 @@ require('traitement.php');
             </div>
 
             <div class="cv-section">
-                    <h3 class="fade-in">Cliquez sur mon CV pour l'agrandir</h3>
+                    <p class="fade-in invitationMessage">Cliquez sur mon CV pour l'agrandir</p>
                     <img src="img/cv.png" alt="CV" class="clickable-image fade-in" id="cv-image" data-modal-target="cv-modal">
                     <a href="doc/cv.pdf" download="Mon_CV.pdf" class="download-cv">
                             <button type="button" class="form-contact-button cvDL fade-in">TÉLÉCHARGER MON CV</button>
@@ -159,7 +162,7 @@ require('traitement.php');
         <section id="contact" class="formulaire">
 
                 <h2 class="titreFormulaire fade-in">CONTACTEZ-MOI</h2>
-                <h3 class="fade-in invitationMessage">N'hésitez pas à me contacter, je vous répondrai dans les plus brefs délais.</h3>
+                <p class="fade-in invitationMessage">N'hésitez pas à me contacter, je vous répondrai dans les plus brefs délais.</p>
 <div class="containerFormRs">
                 
                 
