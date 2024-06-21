@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const observerOptions = {
       root: null, // observe la fenêtre du navigateur
       rootMargin: '0px',
-      threshold: [0, 0.33, 0.66, 1] // Ajoute des seuils intermédiaires pour plus de stabilité
+      threshold: 0.33 // Seuil pour déclencher l'apparition à 33% de visibilité
   };
 
   const observer = new IntersectionObserver((entries, observer) => {
