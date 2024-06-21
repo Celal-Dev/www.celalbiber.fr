@@ -32,7 +32,7 @@ body {
     padding: 0;
     text-align: center;
     line-height: 1.4;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #e9630a;
     opacity: 0;
     transform: translateY(-30px);
     animation: apparition 0.4s 0.4s ease-out forwards;
@@ -69,7 +69,7 @@ body {
 .menu li {
     margin: 0;
     padding: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #e9630a;
     white-space: nowrap;
     display: block;
     font-size: 20px;
@@ -142,7 +142,7 @@ label.menuTitle {
         width: auto;
         display: inline-block;
         border: 0;
-        border-left: 1px solid #ccc;
+        border-left: 1px solid #e9630a;
         box-sizing: border-box; /* Ensure padding is included in width */
     }
 
@@ -1030,6 +1030,12 @@ h4{
     border-radius: 8px;
     cursor: pointer;
     margin-top: 20px;
+    color: #e9630a; 
+    border: 2px solid #e9630a
+  }
+
+  a.lienpolitiquedeconfidentialite{
+    color: #e9630a;
   }
 
   .cookie-container {
