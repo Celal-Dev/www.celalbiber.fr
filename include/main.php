@@ -9,7 +9,7 @@ require('traitement.php');
     <section class="presentation">
         <h2  class="Apropos fade-in">À PROPOS DE MOI</h2>
         <section class="presentation1">
-        <img class="photoMain fade-in" src="img/photo_profil.jpg" alt="dévelopeur wev">
+        <img class="photoMain fade-in"  src="img/photo_profil.jpg" alt="dévelopeur wev">
         <p class="textApropos fade-in">
         Je m'appelle Celal Biber et je suis <strong>développeur web</strong>, passionné par la création de sites internet performants et esthétiques. Je maîtrise plusieurs langages de programmation, notamment le HTML, CSS, JavaScript, PHP et SQL, ainsi que le CMS WordPress, ce qui me permet de créer des sites web performants et sur mesure.
         <br><br>
@@ -168,10 +168,10 @@ require('traitement.php');
                 
                 <form action="" class="containerForm form-contact fade-in" method="POST" tabindex="1">
                     <?=  $erreur  ?>
-                <input type="text" class="form-contact-input" name="nom" placeholder="Nom " required />
-                <input type="text" class="form-contact-input" name="email" placeholder="Email " required />
-                <input type="text" class="form-contact-input" name="telephone" placeholder="Numéro de téléphone " />
-                <textarea class="form-contact-textarea" name="description" placeholder="Écrivez-moi à l'aide de ce formulaire " required></textarea>
+                <input type="text" class="form-contact-input fade-in" name="nom" placeholder="Nom " required />
+                <input type="text" class="form-contact-input fade-in" name="email" placeholder="Email " required />
+                <input type="text" class="form-contact-input fade-in" name="telephone" placeholder="Numéro de téléphone " />
+                <textarea class="form-contact-textarea fade-in" name="description" placeholder="Écrivez-moi à l'aide de ce formulaire " required></textarea>
                 <button type="submit" class="form-contact-button fade-in">ENVOYER</button>
                 </form>
 
